@@ -18,4 +18,4 @@ echo 'application renders satisfactorily. This command actually invokes the test
 echo 'runner Jest (https://facebook.github.io/jest/).'
 set -x
 echo ' test built successfully'
-taskkill /F /PID $(cat .pidfile)
+pkill node
