@@ -3,11 +3,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                bat 'node -v'
                 bat 'npm install'
-                bat 'npm start'
             }
         }
-       
+        
+        stage('Test'){
+            steps{
+                 env.NODE_ENV = "test"
+                 print "Environment will be : ${env.NODE_ENV}"
+                 bat 'npm test'
+
+             }
+        }
+        
+        
                 
     }
 }
