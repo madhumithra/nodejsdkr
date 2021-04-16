@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') {
                     steps {
-                        bat 'test.bat'
+                        bat 'jenkins/scripts/test.bat'
                     }
                 }
                 stage('Deliver') {
