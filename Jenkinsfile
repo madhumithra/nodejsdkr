@@ -4,13 +4,10 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'npm install'
+                bat 'npm start'
             }
         }
-        stage('Test') {
-                    steps {
-                        bat 'jenkins/scripts/test.bat'
-                    }
-                }
+       
                 
     }
 }
